@@ -6,7 +6,9 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   display: grid;
   background-color: #f5f5f5;
   grid-template-columns: 2.5fr 0.9fr;
@@ -31,20 +33,27 @@ body {
 }
 .first-testimony {
   background-color: hsl(263, 55%, 52%);
+  padding: 20px;
+  border-radius: 5px;
 }
 
 .second-testimony {
   background-color: hsl(217, 19%, 35%);
-  height: 300px;
+  padding: 20px;
+  border-radius: 5px;
 }
 
 .third-testimony {
   background-color: hsl(0, 0%, 100%);
-  border: 1px solid black;
+  border: 1px solid #3a383809;
+  border-radius: 5px;
+  padding: 20px;
 }
 
 .fourth-testimony {
   background-color: hsl(219, 29%, 14%);
+  padding: 20px;
+  border-radius: 5px;
 }
 
 .aside-section {
@@ -55,11 +64,13 @@ body {
 }
 .aside-testimony {
   background-color: #ffffff38;
-  border: 1px solid black;
+  border: 1px solid #3a383809;
+  border-radius: 5px;
+  padding: 20px;
 }
 .profile {
   display: flex;
-  margin: 20px;
+  padding: 13px 10px;
 }
 
 .dp {
@@ -83,7 +94,14 @@ body {
   margin-left: 10px;
 }
 
+.user-details-black {
+  color: #000;
+}
+
 .user-details h4 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
   font-size: 1.2rem;
   font-weight: 600;
   color: #fff;
@@ -96,15 +114,51 @@ body {
   font-weight: 400;
 }
 
-.title-description{
+.title-description {
   font-size: 1.2rem;
   font-weight: 600;
   color: #fff;
   margin-bottom: 5px;
-
-
 }
 
-.more-testimonial{
+.title-description-black {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.more-testimonial {
   font-size: 13px;
+  color: #b1b0ac;
+  font-weight: 500;
+}
+
+/* media queries */
+@media screen and (max-width: 375px) {
+  body {
+    grid-template-columns: 1fr; 
+  }
+
+  .main-section {
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto; /* Allow rows to adjust automatically */
+  }
+
+  .main-section :nth-child(1),
+  .main-section :nth-child(2),
+  .main-section :nth-child(3),
+  .main-section :nth-child(4) {
+    grid-column: auto; /* Remove specific grid column spans */
+  }
+
+  .aside-section {
+    grid-column: auto; /* Ensure aside comes after main content */
+    padding: 0; 
+    margin-top: 20px;
+  }
+
+  .aside-testimony {
+    margin-top: 0;
+  }
 }
